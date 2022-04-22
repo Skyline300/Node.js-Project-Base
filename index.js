@@ -50,3 +50,9 @@ rl.on("line", data =>{
     const command = args.shift().toLowerCase();
     mapFunctions.get("cliCommands").function(command, args)
 })
+
+
+
+process.on("uncaughtException", (err) => {
+    console.error(err.stack);
+})
