@@ -13,7 +13,7 @@ var folders = fs.readdirSync(path).filter(function (file) {
     return fs.statSync(path+'/'+file).isDirectory();
 });
 folders.forEach(element => {
-    var commandFiles = fs.readdirSync(`${mainDir}/modules/${element}`).filter(file => file.endsWith('.js') && !file.startsWith("index"));
+    var commandFiles = fs.readdirSync(`${mainDir}/modules/${element}`).filter(file => file.endsWith('.js'));
     for (const file of commandFiles) {
         delete require.cache[require.resolve(`${mainDir}/modules/${element}/${file}`)];
         const command = require(`${mainDir}/modules/${element}/${file}`);
