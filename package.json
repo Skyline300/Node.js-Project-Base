@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"node index",
+    "start": "node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/4n0nh4x0r/Node.js-Project-Base/issues"
   },
-  "homepage": "https://github.com/4n0nh4x0r/Node.js-Project-Base#readme"
+  "homepage": "https://github.com/4n0nh4x0r/Node.js-Project-Base#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  }
 }
