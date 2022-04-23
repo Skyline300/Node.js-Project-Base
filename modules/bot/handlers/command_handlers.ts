@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 module.exports = (client,Discord) => {
-    const command_files = fs.readdirSync('./commands/').filter(file => file.endsWith('.ts'))
+    const command_files = fs.readdirSync('./modules/bot/commands/').filter(file => file.endsWith('.ts'))
 
     for (const file of command_files) {
         const command = require(`../commands/${file}`)
