@@ -19,6 +19,7 @@
   "homepage": "https://github.com/4n0nh4x0r/Node.js-Project-Base#readme",
   "dependencies": {
     "discord.js": "^13.6.0",
-    "dotenv": "^16.0.0"
+    "dotenv": "^16.0.0",
+    "nhentai": "^3.0.0"
   }
 }
