@@ -8,21 +8,13 @@ client.events = new Collection();
 
 console.log("Guild name: "+Guild.name);
 
-['command_handlers.ts','event_handler.ts'].forEach(handler => {
+['command_handlers','event_handler'].forEach(handler => {
   require(`./handlers/${handler}`)(client,discord);
 });
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
-
-
-module.exports = {
-  name:'index',
-  // async execute (){
-  // },
-}
-
 
 client.login(process.env.TOKEN);
     //make sure this line is the last line
