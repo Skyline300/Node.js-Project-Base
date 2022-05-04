@@ -24,7 +24,6 @@ module.exports = {
                     }
                 });
                 console.log(`Reloaded ${mapFunctions.size} modules`)
-                mapFunctions.get("index").execute()
             break;
             default:
                 console.log("This is not a recognised command");
