@@ -5,6 +5,9 @@ module.exports = {
             case "exit":
                 process.exit(1);
             break;
+            case "restart":
+                mapFunctions.get("index").restart()
+            break;
             case "reload":
                 mapFunctions.clear()
                 // Reloading the Function Map
@@ -21,6 +24,7 @@ module.exports = {
                     }
                 });
                 console.log(`Reloaded ${mapFunctions.size} modules`)
+                mapFunctions.get("index").execute()
             break;
             default:
                 console.log("This is not a recognised command");

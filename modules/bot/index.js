@@ -3,7 +3,6 @@ const { Client, Intents, Collection } = require('discord.js'); //import discord.
 const discord = require('discord.js')
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] }); //create new client
 
-
 client.commands = new Collection();
 client.events = new Collection();
 
@@ -21,6 +20,22 @@ module.exports = {
     
     //make sure this line is the last line
     client.login(process.env.TOKEN); //login bot using token
+  },
+  async restart(){
+    console.log("restarting.....")
+    setTimeout( () => 
+            {
+                process.on("exit", function () 
+                {
+                    require( "child_process" ).spawn(process.argv.shift(), process.argv, 
+                    {
+                        cwd: process.cwd(),
+                        detached : true,
+                        stdio: "inherit"
+                    });
+                });
+                process.exit();
+            }, 1000);
   }
 }
 
