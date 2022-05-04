@@ -13,7 +13,7 @@ module.exports = {
                     return fs.statSync(path+'/'+file).isDirectory();
                 });
                 folders.forEach(element => {
-                    var commandFiles = fs.readdirSync(`${path}/${element}`).filter(file => file.endsWith('.js'));
+                    var commandFiles = fs.readdirSync(`${path}/${element}`).filter(file => file.endsWith('.js') && !file.startsWith("index"));
                     for (const file of commandFiles) {
                         delete require.cache[require.resolve(`${path}/${element}/${file}`)];
                         const command = require(`${path}/${element}/${file}`);
