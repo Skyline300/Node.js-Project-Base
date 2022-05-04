@@ -5,9 +5,6 @@ module.exports = {
             case "exit":
                 process.exit(1);
             break;
-            case "restart":
-                mapFunctions.get("index").restart()
-            break;
             case "reload":
                 mapFunctions.clear()
                 // Reloading the Function Map

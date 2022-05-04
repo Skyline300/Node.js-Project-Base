@@ -23,17 +23,18 @@ folders.forEach(element => {
 
 
 // The startup information for the project, here you can add stuff that might be nice to see when the app starts
-mapFunctions.get("Startup_function").function()
+// mapFunctions.get("Startup_function").function()
 console.log("------------------------------------ Status ------------------------------------");
 console.log(__dirname);
 console.log(platform);
 console.log(`The Startup took ${new Date() - start}ms`)
 console.log(`${mapFunctions.size} Function modules loaded`);
+console.log(mapFunctions)
 console.log("--------------------------------------------------------------------------------");
 
 
 
-
+ 
 
 
 
