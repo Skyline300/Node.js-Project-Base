@@ -60,6 +60,9 @@ rl.on("line", data =>{
     mapFunctions.get("cliCommands").function(command, args)
 })
 
+
+client.on('messageCreate')
+
 client.login(process.env.TOKEN);
     //make sure this line is the last line
     //login bot using token
