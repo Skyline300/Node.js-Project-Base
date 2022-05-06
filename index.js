@@ -12,6 +12,7 @@ var path = `${mainDir}/modules`
 var folders = fs.readdirSync(path).filter(function (file) {
     return fs.statSync(path+'/'+file).isDirectory();
 });
+console.log(folders)
 folders.forEach(element => {
     var commandFiles = fs.readdirSync(`${mainDir}/modules/${element}`).filter(file => file.endsWith('.js') && !file.startsWith("index"));
     for (const file of commandFiles) {
@@ -59,9 +60,6 @@ rl.on("line", data =>{
     const command = args.shift().toLowerCase();
     mapFunctions.get("cliCommands").function(command, args)
 })
-
-
-client.on('messageCreate')
 
 client.login(process.env.TOKEN);
     //make sure this line is the last line

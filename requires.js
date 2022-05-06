@@ -11,7 +11,7 @@ config          = require("./config/config");
 Discord         = require('discord.js');
 nhentai         = require('nhentai');
 const { Client, Intents, Collection,Guild } = require('discord.js');
-const client          = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+client          = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 
 // client.on('messageCreate',(message)=>{

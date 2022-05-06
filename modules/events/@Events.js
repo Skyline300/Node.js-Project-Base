@@ -1,3 +1,5 @@
+
+require('../../requires')
 /*
 
                     DO NOT FORGET TO ADD EVERY SINGLE EVENT ADDED HERE TO THE REMOVELISTENER ARRAY
@@ -17,6 +19,7 @@ client.on("channelDelete", async oldchannel =>{
 })
 
 client.on("guildMemberAdd", async newMember => {
+    mapFunctions.get("memberadd").function(newMember)
 })
 
 client.on("guildCreate", async newGuild => {
