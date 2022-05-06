@@ -12,7 +12,7 @@ module.exports = {
         if(await message.guild.members.fetch(id)){
           for (let i = 0; i < num; i++) {
             await message.channel.send(`<@${id}>`)
-            await wait(1000)
+            await wait(3000)
           }
         }else {
           await message.channel.send("invalid id you retard")

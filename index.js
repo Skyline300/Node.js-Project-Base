@@ -23,7 +23,7 @@ folders.forEach(element => {
 });
 
 
-require('dotenv').config(); //initialize dotenv
+//require('dotenv').config(); //initialize dotenv
 // const { Client, Intents, Collection,Guild } = require('discord.js'); //import discord.js
 // const discord = require('discord.js');
 // const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] }); //create new client
