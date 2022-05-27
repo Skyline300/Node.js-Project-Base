@@ -14,7 +14,7 @@ module.exports = {
         msg.content = msg.content.replace(/  +/g, ' ')
         const args = msg.content.slice(prefix.length).trim().split(" ");
         const command = args.shift().toLowerCase();
-        //console.log(`${msg.author.username}: ${command}   ${args}`)
+        console.log(`${msg.author.username}: ${command},   ${args}`)
         switch(msg.guild){
             default:    //        Server Functions
                 try {
